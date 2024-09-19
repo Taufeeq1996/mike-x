@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+
+.content{
+    max-width: 750px;
+    height: 100dvh;
+    margin: 0 auto;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    color: #fff;
+}
+
+.content .logo {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+}
+
+.content .logo img {
+    width: 100px;
+}
+
+.posts li{
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 17px;
+}
+
+.posts li .user-logo {
+    flex-basis: 15%;
+}
+
+.posts li .user-logo img {
+    width: 100px;
+}
+
+.posts li .name_body{
+    flex-basis: 85%;
+}
+
+
+.post_forum{
+    padding: 20px 40px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+
+.post_forum input{
+    width: 70%;
+    padding: 10px 20px;
+}
+
+.post_forum textarea{
+    width: 70%;
+    padding: 10px;
+}
+
+
+.posts li .logo img{
+    width: 60%;
+}
+
+.posts li .name{
+    font-weight: bold;
+}
+
+.posts li .datetime{
+    color: gray;
+}
+
+
+.posts li .menu_icon{
+    position: absolute;
+    width: 20px;
+    right: 30px;
+    top: 18px;
+
+}
+
+
+.posts li .menu{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+
+.posts li .menu a{
+    text-decoration: none;
+}
+
+/* textarea{
+    margin-left: 25px;
+    margin-top: 4px;
+    width: 151px;
+
+
+}
+
+input[type="text"]{
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 150px;
+} */
+
+input[type="submit"]{
+    width: 157px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+
+}
+
+button.submit-button {
+    width: 157px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: 0;
+    border-radius: 10px; 
+}
+
+a.cancel {
+    width: 116px;
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.post_form header img {
+    width: 200px;
+    padding: 10px 20px;
+}
+
+.post_form header h1 {
+    padding: 20px 20px;
+}
+
+.post_forum  input[type='file'] {
+    border: 1px solid #fff;
+    padding: 10px 20px;
+}
+
+
+.posts ul{
+   padding: 0; 
+}
+
+.row a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+}
+
+.row img {
+    width: 20px;
+}
+

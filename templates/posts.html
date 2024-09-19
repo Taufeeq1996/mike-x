@@ -1,0 +1,59 @@
+{% extends 'base.html' %}{% block content %} {% load static %}
+
+<section class="content">
+    <div class='logo'>
+    <img src="{% static 'img/x-logo.jpg' %}" alt="X"/> 
+    </div>
+    <form action="/" method="POST" enctype="multipart/form-data" class='post_forum'>
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter your Name" required />
+        <textarea name="body" placeholder="Tell us anything" required></textarea>
+        <input name='image' type="file" >
+        <input type="submit" value="Post" value="Like">
+    </form>
+    <section class="posts">
+
+        <ul>
+        {% for post in posts reversed %}
+
+            <li>
+                <img class="menu_icon js-menu-icon" src="{% static 'img/dots.png' %}" alt="menu">
+                <div class="menu">
+                    <a href="/delete/{{post.id}}/">Delete</a>
+                    <a href = "/edit/{{post.id}}/">Edit</a>
+                </div>
+                <div class="user-logo">
+                    <img src="{% static 'img/user.png' %}" alt="user">
+                </div>
+
+                <div class="name_body">
+                    <div class="name">{{ post.name }}</div>
+                    <div class="datetime">{{ post.created_at }}</div>
+                    <p>{{ post.body }}</p>
+                    <br>
+                    {% if post.image.url %}
+                    <img class ="post-image" src = "{{ post.image.url}}" alt ="">
+                    {% endif %}
+
+                        {% csrf_token %}
+                        <div class = "row"> 
+                        <a href="like/{{post.id}}/" >
+                           <img src="{% static 'img/like_button.png' %}" alt="like" >
+                            {{post.like}}
+                            </a>
+                        </div>
+
+                </div>
+             
+                </div>
+            
+
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'js/post.js' %}"></script>
+</section>
+{% endblock %} 
